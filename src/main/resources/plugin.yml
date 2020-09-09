@@ -1,0 +1,29 @@
+name: AuctionHousePricer
+version: ${project.version}
+authors: [Baktus_79]
+main: no.vestlandetmc.auctionhousepricer.AhPricerPlugin
+description: Addon for AuctionHouse for setting minimum prices on items.
+website: www.vestlandetmc.no
+prefix: AuctionHousePricer
+api-version: 1.16
+depend: [AuctionHouse]
+commands:
+  ahpreload:
+    description: Reload AuctionHousePricer
+    permission: ahp.reload
+    permission-message: §cSorry, but you do not have permissions to do that.
+    usage: /<command>
+permissions:
+  ahp.admin:
+    description: Give you access to everything
+    default: op
+    children:
+      ahp.reload: true
+      ahp.bypass: true
+  ahp.reload:
+    description: Reload AuctionHousePricer
+    default: op
+  ahp.bypass:
+    description: Bypasses the pricelimiter
+    default: op
+    
