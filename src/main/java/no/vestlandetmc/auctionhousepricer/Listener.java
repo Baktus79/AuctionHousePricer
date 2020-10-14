@@ -67,8 +67,8 @@ public class Listener implements org.bukkit.event.Listener {
 				if(realListPrice < limitPrice) {
 					MessageHandler.sendMessage(player,
 							"&cThe minimum amount cannot be lower than the market price.",
-							"&cThe marked price is set to&b: $" + balFormat(limitPrice),
-							"&cYour price per item: &b$" + balFormat(realListPrice));
+							"&cThe marked price is set to&b: $" + balFormat(limitPrice * itemAmount),
+							"&cYour price per item: &b$" + balFormat(listPrice));
 
 					e.setCancelled(true);
 
